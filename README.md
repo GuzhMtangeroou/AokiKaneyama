@@ -83,7 +83,7 @@
    * 特殊信息一览：
      tes:测试版本
      tes-pu:公测版本
-     bad:存在
+     bad:存在问题/未经详细测试的版本
 
 ## 插件
 ####一切都需要编写插件来实现功能
@@ -91,16 +91,4 @@
 #### 不过我们有一些我们自己制作的插件，后续可能会放在源码中或是releases中
 
 ## ❤️鸣谢❤️
-
-### 请勿直接提交到[`master`](https://github.com/xiaosuyyds/MuRainBot2)分支，请先提交到[`dev`](https://github.com/xiaosuyyds/MuRainBot2/tree/dev)分支，随后再创建PR合并分支
-### 感谢所有为此项目做出贡献的大大，你们的存在，让社区变得更加美好~！
-<a href="https://github.com/xiaosuyyds/MuRainBot2/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=xiaosuyyds/MuRainBot2&max=999" alt=感谢他们（鼓掌）！>
-</a>
-
-### 以及特别鸣谢[HarcicYang](https://github.com/HarcicYang)和[kaokao221](https://github.com/kaokao221)为此项目提供了许多的帮助~
-
-
-## ⭐StarHistory⭐
-
-[![](https://api.star-history.com/svg?repos=xiaosuyyds/MuRainBot2&type=Date)](https://github.com/xiaosuyyds/MuRainBot2/stargazers)
+没有，别看了
