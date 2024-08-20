@@ -1,10 +1,4 @@
 # coding:utf-8
-#   __  __       ____       _         ____        _   _____
-#  |  \/  |_   _|  _ \ __ _(_)_ __   | __ )  ___ | |_|___  \
-#  | |\/| | | | | |_) / _` | | '_ \  |  _ \ / _ \| __| __) |
-#  | |  | | |_| |  _ < (_| | | | | | | |_) | (_) | |_ / __/
-#  |_|  |_|\__,_|_| \_\__,_|_|_| |_| |____/ \___/ \__|_____|
-
 import atexit
 import threading
 
@@ -44,22 +38,9 @@ def finalize_and_cleanup():
 # 主函数
 if __name__ == '__main__':
     logger.info(f"开始运行，当前版本：{VERSION}({VERSION_WEEK})")
-    logger.info("Github: https://github.com/xiaosuyyds/MuRainBot2/")
+    logger.info("https://github.com/GuzhMtangeroou/AokiKaneyama/")
 
     LibInfo.main_version, LibInfo.main_version_week = VERSION, VERSION_WEEK
-
-    # 版本检测
-    if LibInfo().version == LibInfo.main_version:
-        logger.info("版本校验成功！")
-    else:
-        logger.warning("版本检测未通过，可能会发生异常\n"
-                       f"MuRainLib版本:{LibInfo().version} MuRain Bot版本:{LibInfo.main_version}\n"
-                       "注意：我们将不会受理在此模式下运行的报错")
-        if input("Continue?(Y/n)").lower() != "y":
-            sys.exit()
-        logger.warning("MuRainLib版本检测未通过，可能会发生异常，将继续运行！")
-
-    logger.info("MuRainLib当前版本：{}({})".format(LibInfo().version, LibInfo().version_week))
 
     bot_uid = Configs.GlobalConfig().user_id
     bot_name = Configs.GlobalConfig().nick_name
