@@ -25,7 +25,7 @@
 │   ├─ json     不属于某个单独群聊的Bot及插件的json临时/缓存文件
 │   ...
 ├─ Lagrange.Core    QQBot内核框架，此处以Lagrange.Core示例
-├─ Lib          Lib库，本体和插件均需要依赖此Lib
+├─ Lib          Lib库，本体和插件均需要依赖这些库
 │   ├─ __init__.py     Lib
 │   ├─ BotController.py   用于控制Bot
 |   ├─ Configs.py      用于配置文件的一些功能
@@ -65,11 +65,11 @@
 * [**installer.py**](installer.py)
   * 运行[`installer.py`](installer.py)随后静待安装成功
   * 配置好之后运行先运行`Lagrange.OneBot`然后运行`main.py`即可
-* ~~**releases**~~
+* **releases**
   * 首先配置Lagrange.OneBot的`appsettings.json`，如有需要可以修改正反向HTTP端口
   * 随后配置一下MRB2的[`config.yml`](config.yml)账号和QQ号
   * 配置好之后运行先运行`Lagrange.OneBot`然后运行`main.py`即可
-* ~~**源码包**~~
+* ~~**源码包（别了到时候被赛博文盲内涵就不好了）**~~
   * 自行配置框架，并修改正反向HTTP端口，与框架匹配
   * 随后配置一下MRB2的[`config.yml`](config.yml)账号和QQ号
   * 配置好之后运行先运行框架然后运行`main.py`即可
@@ -79,9 +79,9 @@
 * 关于版本号与版本周的说明：
    * 版本号格式为`<主版本>.<次版本>(<年份>#<季度>-<特殊信息（如有）>` 例如`1.0（2024#3）`
    * 特殊信息一览：
-     tes:测试版本
+     tes:内测版本
      tes-pu:公测版本
-     bad:存在问题/未经详细测试的版本
+     goose:愚人节版本
 
 ## 插件
 ####一切都需要编写插件来实现功能
