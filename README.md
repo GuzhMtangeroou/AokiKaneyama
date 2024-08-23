@@ -2,12 +2,11 @@
 <img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABwCAMAAADxPgR5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAxQTFRF////29vbr6+vAAAAk1hCcwAAAAR0Uk5T////AEAqqfQAAAKcSURBVHja7NrbctswDATQXfD//zlpO7FlmwAWIOnOtNaTM5JwDMa8E+PNFz7g3waJ24fviyDPgfhz8fHP39cBcBL9KoJbQUxjA2iYqHL3FAnvzhL4GtVNUcoSZe6eSHizBcK5LL7dBr2AUZlev1ARRHCljzRALIEog6H3U6bCIyqIZdAT0eBuJYaGiJaHSjmkYIZd+qSGWAQnIaz2OArVnX6vrItQvbhZJtVGB5qX9wKqCMkb9W7aexfCO/rwQRBzsDIsYx4AOz0nhAtWu7bqkEQBO0Pr+Ftjt5fFCUEbm0Sbgdu8WSgJ5NgH2iu46R/o1UcBXJsFusWF/QUaz3RwJMEgngfaGGdSxJkE/Yg4lOBryBiMwvAhZrVMUUvwqU7F05b5WLaUIN4M4hRocQQRnEedgsn7TZB3UCpRrIJwQfqvGwsg18EnI2uSVNC8t+0QmMXogvbPg/xk+Mnw/6kW/rraUlvqgmFreAA09xW5t0AFlHrQZ3CsgvZm0FbHNKyBmheBKIF2cCA8A600aHPmFtRB1XvMsJAiza7LpPog0UJwccKdzw8rdf8MyN2ePYF896LC5hTzdZqxb6VNXInaupARLDNBWgI8spq4T0Qb5H4vWfPmHo8OyB1ito+AysNNz0oglj1U955sjUN9d41LnrX2D/u7eRwxyOaOpfyevCWbTgDEoilsOnu7zsKhjRCsnD/QzhdkYLBLXjiK4f3UWmcx2M7PO21CKVTH84638NTplt6JIQH0ZwCNuiWAfvuLhdrcOYPVO9eW3A67l7hZtgaY9GZo9AFc6cryjoeFBIWeU+npnk/nLE0OxCHL1eQsc1IciehjpJv5mqCsjeopaH6r15/MrxNnVhu7tmcslay2gO2Z1QfcfX0JMACG41/u0RrI9QAAAABJRU5ErkJggg==" alt="Badge">
     </a>
     <br>
-    <a href="https://github.com/xiaosuyyds/MuRainBot2">
+    <a href="https://github.com/GuzhMtangeroou/AokiKaneyama">
         <img src="https://counter.seku.su/cmoe?name=murainbot2&theme=rule34" alt=""/>
     </a>
 </p>
 
-| 简体中文 | [English](README_EN.md) |
 
 ### 这是一个基于python适配onebot11协议的QQBot ~~(框架?)~~
 ### 首先感谢您选择/使用了鐘山酱作为您的QQBot
@@ -53,15 +52,14 @@
 │   ...
 ├─ config.yml   MRB2配置文件
 ├─ main.py      MRB2代码（运行这个即可启动）
-├─ README.md    这个文件就不用解释了吧（？）
-└─ README_en.md No need to explain this file, right?
+└─ README.md    这个文件就不用解释了吧（？）
 ```
 
 </details>
 
 
 ## 部署
-**作者在python3.10编写、测试均未发现问题，其他版本暂未测试**
+**作者在python3.11.4编写、测试均未发现问题，其他版本暂未测试**
 * 下载本项目的releases或源码包
 * 请下载python环境，并使用pip安装[`requirements.txt`](requirements.txt)内的库
 * [**installer.py**](installer.py)
