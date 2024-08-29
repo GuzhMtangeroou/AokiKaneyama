@@ -1,16 +1,10 @@
 <h1 align="center">AokiKaneyama（青木鐘山）</h1>
-<img src="https://img.shields.io/badge/OneBot-11-black?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABwCAMAAADxPgR5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAxQTFRF////29vbr6+vAAAAk1hCcwAAAAR0Uk5T////AEAqqfQAAAKcSURBVHja7NrbctswDATQXfD//zlpO7FlmwAWIOnOtNaTM5JwDMa8E+PNFz7g3waJ24fviyDPgfhz8fHP39cBcBL9KoJbQUxjA2iYqHL3FAnvzhL4GtVNUcoSZe6eSHizBcK5LL7dBr2AUZlev1ARRHCljzRALIEog6H3U6bCIyqIZdAT0eBuJYaGiJaHSjmkYIZd+qSGWAQnIaz2OArVnX6vrItQvbhZJtVGB5qX9wKqCMkb9W7aexfCO/rwQRBzsDIsYx4AOz0nhAtWu7bqkEQBO0Pr+Ftjt5fFCUEbm0Sbgdu8WSgJ5NgH2iu46R/o1UcBXJsFusWF/QUaz3RwJMEgngfaGGdSxJkE/Yg4lOBryBiMwvAhZrVMUUvwqU7F05b5WLaUIN4M4hRocQQRnEedgsn7TZB3UCpRrIJwQfqvGwsg18EnI2uSVNC8t+0QmMXogvbPg/xk+Mnw/6kW/rraUlvqgmFreAA09xW5t0AFlHrQZ3CsgvZm0FbHNKyBmheBKIF2cCA8A600aHPmFtRB1XvMsJAiza7LpPog0UJwccKdzw8rdf8MyN2ePYF896LC5hTzdZqxb6VNXInaupARLDNBWgI8spq4T0Qb5H4vWfPmHo8OyB1ito+AysNNz0oglj1U955sjUN9d41LnrX2D/u7eRwxyOaOpfyevCWbTgDEoilsOnu7zsKhjRCsnD/QzhdkYLBLXjiK4f3UWmcx2M7PO21CKVTH84638NTplt6JIQH0ZwCNuiWAfvuLhdrcOYPVO9eW3A67l7hZtgaY9GZo9AFc6cryjoeFBIWeU+npnk/nLE0OxCHL1eQsc1IciehjpJv5mqCsjeopaH6r15/MrxNnVhu7tmcslay2gO2Z1QfcfX0JMACG41/u0RrI9QAAAABJRU5ErkJggg==" alt="Badge">
-    </a>
-    <br>
-    <a href="https://github.com/GuzhMtangeroou/AokiKaneyama">
-        <img src="https://counter.seku.su/cmoe?name=murainbot2&theme=rule34" alt=""/>
-    </a>
-</p>
 
 
 ### 这是一个基于python适配onebot11协议的QQBot ~~(框架?)~~
 ### 首先感谢您选择/使用了鐘山酱作为您的QQBot
-##### ~~作者自己写着用的，有一些写的不好的地方还请见谅（不过估计也没人会用我这个项目吧）~~
+##### ~~原作者自己写着用的，他肯定没想到真有人会用这个（）~~
+##### ~~不过说起来一个小学生写的怎么我这个初中生都快看不懂了~~
 
 
 
@@ -50,8 +44,8 @@
 │   ├─ xxx.yml  xxx插件的配置文件
 │   ├─ yyy.yml  yyy插件的配置文件
 │   ...
-├─ config.yml   MRB2配置文件
-├─ main.py      MRB2代码（运行这个即可启动）
+├─ config.yml   配置文件
+├─ main.py      主程序（运行这个即可启动）
 └─ README.md    这个文件就不用解释了吧（？）
 ```
 
@@ -84,10 +78,10 @@
      goose:愚人节版本
 
 ## 插件
-####一切都需要编写插件来实现功能
+#### 一切都需要编写插件来实现功能
 ### 请参照[MRB2插件编写规范](https://github.com/xiaosuyyds/MuRainBot2?tab=readme-ov-file#mrb2%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83 "MRB2插件编写规范")
 #### 不过我们有一些我们自己制作的插件，后续可能会放在源码中或是releases中
-##文档
-####[~~由于懒得写文档所以去看MuRainBot2的就好啦~~](https://github.com/xiaosuyyds/MuRainBot2/blob/master/docs/readme.md "~~由于懒得写文档所以去看MuRainBot2的就好啦~~")
+## 文档
+#### [~~由于懒得写文档所以去看MuRainBot2的就好啦~~](https://github.com/xiaosuyyds/MuRainBot2/blob/master/docs/readme.md "~~由于懒得写文档所以去看MuRainBot2的就好啦~~")
 ## ❤️鸣谢❤️
 没有，别看了
