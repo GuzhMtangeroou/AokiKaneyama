@@ -1,6 +1,6 @@
-<h1 align="center">AokiKaneyama（青木鐘山）</h1>
+<h1 align="center">Aoki（青木）</h1>
 
-
+## AokiKaneyama正式更名为Aoki（青木）
 ### 这是一个基于python适配onebot11协议的QQBot ~~(框架?)~~
 ### 首先感谢您选择/使用了鐘山酱作为您的QQBot
 ##### ~~原作者自己写着用的，他肯定没想到真有人会用这个（）~~
