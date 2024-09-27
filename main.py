@@ -27,12 +27,11 @@ if not os.path.exists(cache_path):
 # 结束运行
 @atexit.register
 def finalize_and_cleanup():
-    logger.info("MuRainBot即将关闭，正在删除缓存")
+    logger.info("即将关闭，正在删除缓存")
 
     clean_cache()
 
-    logger.warning("MuRainBot结束运行！")
-    logger.info("再见！\n")
+    logger.warning("结束运行！")
 
 
 # 主函数
