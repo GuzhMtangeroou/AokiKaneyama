@@ -18,7 +18,7 @@ import multitasking
 import sys
 from retry import retry
 
-url = "https://github.com/xiaosuyyds/MuRainBot2/archive/refs/heads/master.zip"
+url = "https://github.com/GuzhMtangeroou/AokiKaneyama/archive/refs/heads/master.zip"
 
 work_path = os.path.abspath(os.path.dirname(__file__))
 mrb2_path = os.path.join(work_path, "MuRainBot2")
