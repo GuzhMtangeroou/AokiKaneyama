@@ -6,11 +6,11 @@ account: # 账号相关
 
 api: # Api设置
   host: '127.0.0.2'
-  port: 5840
+  port: 5700
 
 server: # 监听服务器设置
   host: '127.0.0.2'
-  port: 5841
+  port: 5701
 
 thread_pool: # 线程池最大线程数
   max_workers: 5
