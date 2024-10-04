@@ -40,9 +40,9 @@ def load_plugins():
             t = time.time()
             logger.debug("正在加载插件: {}:".format(i))
             plugins.append({"name": i, "plugin": importlib.import_module('.' + i, package='plugins')})
-            logger.debug("插件 {} 加载成功！ 耗时 {}s".format(i, round(time.time() - t, 2)))
+            logger.debug("插件 {} 加载成功，耗时 {}s".format(i, round(time.time() - t, 2)))
         except Exception as e:
-            logger.error("导入插件 {} 失败！ 原因:{}".format(i, repr(e)))
+            logger.error("导入插件 {} 时出现错误:{}".format(i, repr(e)))
     return plugins
 
 
