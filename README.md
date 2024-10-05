@@ -1,4 +1,6 @@
-<h1 align="center">Aoki（青木）</h1>
+![center](https://static.codemao.cn/pickduck/Hkq2gsCCA.jpg)
+<h2>看板fu（bushi）</h2>
+<h1 align="center">Aoki-青木</h1>
 
 ## AokiKaneyama正式更名为Aoki（青木）
 ### 这是一个基于python适配onebot11协议的QQBot ~~(框架?)~~
