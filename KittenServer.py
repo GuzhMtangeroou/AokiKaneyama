@@ -18,14 +18,6 @@ ERROR_GET_FUNCTIONS = 16
 
 g_kw_tmp_mod = None
 
-class PluginInfo(PluginManager.PluginInfo):
-    def __init__(self):
-        super().__init__()
-        self.NAME = "KittenServer"  # 插件名称
-        self.AUTHOR = "vika"  # 插件作者
-        self.VERSION = "1.0.0"  # 插件版本
-        self.DESCRIPTION = "Kitten Server"  # 插件描述
-
 class RequestHandler(http.server.BaseHTTPRequestHandler):
 
     py_module_loaded = False
@@ -252,7 +244,7 @@ def start_server():
         )
     httpd.serve_forever()
 
-def main(py_path,dirname,filename):
+def main(py_path,dirname):
     if os.path.exists(py_path):
         os.chdir(dirname)
     else:
@@ -262,4 +254,4 @@ def main(py_path,dirname,filename):
 
 
 if __name__ == "__main__":
-    main("C:\\Users\\songlei\\Desktop\\Aoki","C:\\Users\\songlei\\Desktop\\Aoki","main")
+    main(os.getcwd(),os.getcwd())

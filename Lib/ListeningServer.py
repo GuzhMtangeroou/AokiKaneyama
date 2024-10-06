@@ -105,7 +105,7 @@ def post_data():
             group_path = os.path.join(data_path, "groups", str(data.group_id))
             # 如果获取群文件夹路径不存在, 则创建
             if not os.path.exists(group_path):
-                control.new_in(data.group_id)
+                control.new_here(data.group_id)
                 os.makedirs(group_path)
 
         else:
@@ -169,7 +169,7 @@ def post_data():
                 logger.info("检测到Bot被 %s(%s) 踢出了群聊 %s(%s)" %
                             (operator.get_group_name(), operator.user_id, group.group_name, group.group_id))
                 outtime=time.strftime("%H:%M:%S %Y-%m-%d", time.localtime())
-                BotController.send_message(QQRichText.QQRichText(f"[{outtime}]Bot被移出群聊{group.group_id}，若该操作非主动操作，请联系该群管理员"))
+                BotController.send_message(QQRichText.QQRichText(f"[{outtime}]Bot被移出群聊{group.group_id}，若该操作非主动操作，请联系该群管理员"),user_id=control.admin[0])
 
         # 群成员增加
         elif data.notice_type == "group_increase":
@@ -180,10 +180,12 @@ def post_data():
                 logger.info("群%s(%s) 内管理员 %s(%s) 通过了新成员 %s(%s) 的加群请求" %
                             (group.group_name, group.group_id, operator.get_group_name(),
                              operator.user_id, user.get_group_name(), user.user_id))
+                BotController.send_message(QQRichText.QQRichText({"type": "image","data":{"file": "https://static.codemao.cn/pickduck/BJjoUrRAA.jpg"}}),group_id=group.group_id)
             elif data.sub_type == "invite":
                 logger.info("群 %s(%s) 内 %s(%s) 邀请 %s(%s) 加入了群聊" %
                             (group.group_name, group.group_id, operator.get_group_name(),
                              operator.user_id, user.get_group_name(), user.user_id))
+                BotController.send_message(QQRichText.QQRichText({"type": "image","data":{"file": "https://static.codemao.cn/pickduck/BJjoUrRAA.jpg"}}),group_id=group.group_id)
 
         # 群禁言
         elif data.notice_type == "group_ban":

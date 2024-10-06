@@ -93,12 +93,6 @@ if __name__ == '__main__':
     # 启动监听服务器
     try:
         logger.info("启动监听服务器")
-        try:
-            import plugins.KittenServer as ServerSDK
-            logger.info("启动Kitten Server")
-            ServerSDK.main(os.getcwd(),os.getcwd(),"main")
-        except ModuleNotFoundError:
-            pass
         ListeningServer.server.serve_forever()
     except Exception as e:
         logger.error("监听服务器启动失败，报错信息：{}".format(repr(e)))
