@@ -1,14 +1,23 @@
 # coding:utf-8
 import atexit
 import threading
+import Lib.ThreadPool
 from Lib import *
+
+BANNER = r""" __  __       ____       _         ____        _   _____
+|  \/  |_   _|  _ \ __ _(_)_ __   | __ )  ___ | |_|___  \
+| |\/| | | | | |_) / _` | | '_ \  |  _ \ / _ \| __| __) |
+| |  | | |_| |  _ < (_| | | | | | | |_) | (_) | |_ / __/
+|_|  |_|\__,_|_| \_\__,_|_|_| |_| |____/ \___/ \__|_____|
+https://github.com/xiaosuyyds/MuRainBot2
+"""
 
 logger = Logger.logger
 VERSION = "1.0"  # 版本
 VERSION_WEEK = "2024#3"  # 版本周
 
 api = OnebotAPI.OnebotAPI()
-
+Lib.ThreadPool.init()
 request_list = []
 
 work_path = os.path.abspath(os.path.dirname(__file__))
@@ -68,7 +77,7 @@ if __name__ == '__main__':
     if bot_uid is None or bot_name == "" or bot_uid == 123456 or bot_name is None:
         logger.info("配置文件中未找到BotUID或昵称，正在自动获取")
 
-        bot_info = api.get("/get_login_info")
+        bot_info = api.get_login_info()
         if not isinstance(bot_info, dict):
             logger.error(f"获取BotUID与昵称失败，可能会导致严重问题({repr(bot_info)})")
         elif "user_id" in bot_info and "nickname" in bot_info:
