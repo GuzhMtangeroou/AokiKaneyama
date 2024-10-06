@@ -1,6 +1,7 @@
 from flask import Flask, request
 from werkzeug.serving import make_server
 import threading
+import plugins.Control as control
 import Lib.OnebotAPI as OnebotAPI
 import Lib.Configs as Configs
 import Lib.BotController as BotController
@@ -30,9 +31,9 @@ def heartbeat_check():
     while True:
         if heartbeat_interval > 0:
             if time.time() - last_heartbeat_time > heartbeat_interval * 2:
-                logger.warning("心跳包超时！请检查 Onebot 实现端是否正常运行！")
+                logger.warning("心跳包超时，请检查 Onebot 实现端")
                 if config.auto_restart_onebot:
-                    logger.warning("将自动重启 Onebot 实现端！")
+                    logger.warning("即将自动重启实现端")
                     api.set_restart()
         time.sleep(1)
 
@@ -104,6 +105,7 @@ def post_data():
             group_path = os.path.join(data_path, "groups", str(data.group_id))
             # 如果获取群文件夹路径不存在, 则创建
             if not os.path.exists(group_path):
+                control.new_here(data.group_id)
                 os.makedirs(group_path)
 
         else:
@@ -166,6 +168,8 @@ def post_data():
             elif data.sub_type == "kick_me" or user.user_id == config.user_id:
                 logger.info("检测到Bot被 %s(%s) 踢出了群聊 %s(%s)" %
                             (operator.get_group_name(), operator.user_id, group.group_name, group.group_id))
+                outtime=time.strftime("%H:%M:%S %Y-%m-%d", time.localtime())
+                BotController.send_message(QQRichText.QQRichText(f"[{outtime}]Bot被移出群聊{group.group_id}，若该操作非主动操作，请联系该群管理员"),user_id=control.admin[0])
 
         # 群成员增加
         elif data.notice_type == "group_increase":
@@ -176,10 +180,12 @@ def post_data():
                 logger.info("群%s(%s) 内管理员 %s(%s) 通过了新成员 %s(%s) 的加群请求" %
                             (group.group_name, group.group_id, operator.get_group_name(),
                              operator.user_id, user.get_group_name(), user.user_id))
+                BotController.send_message(QQRichText.QQRichText({"type": "image","data":{"file": "https://static.codemao.cn/pickduck/BJjoUrRAA.jpg"}}),group_id=group.group_id)
             elif data.sub_type == "invite":
                 logger.info("群 %s(%s) 内 %s(%s) 邀请 %s(%s) 加入了群聊" %
                             (group.group_name, group.group_id, operator.get_group_name(),
                              operator.user_id, user.get_group_name(), user.user_id))
+                BotController.send_message(QQRichText.QQRichText({"type": "image","data":{"file": "https://static.codemao.cn/pickduck/BJjoUrRAA.jpg"}}),group_id=group.group_id)
 
         # 群禁言
         elif data.notice_type == "group_ban":
@@ -272,7 +278,7 @@ def post_data():
             if data.status.get("online") is not True or data.status.get("good") is not True:
                 logger.warning("心跳包异常，当前状态：%s" % data.status)
                 if config.auto_restart_onebot:
-                    logger.warning("将自动重启 Onebot 实现端！")
+                    logger.warning("即将自动重启 Onebot 实现端！")
                     api.set_restart()
 
             # 检查心跳包间隔是否正常

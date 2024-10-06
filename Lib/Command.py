@@ -156,15 +156,15 @@ class SendMsgCommand(Command):
 class ExitCommand(Command):
     def __init__(self):
         super().__init__()
-        self.command_help = "exit: 退出程序"
-        self.command_name = "exit"
+        self.command_help = "RESTART: 退出程序"
+        self.command_name = "RESTART"
 
     def run(self, input_command: CommandParsing, **kwargs):
-        logger.info("MuRainBot即将关闭，正在删除缓存")
+        logger.info("正在删除缓存")
         MuRainLib.clean_cache()
-        logger.warning("MuRainBot结束运行！")
-        logger.info("再见！\n")
-        os._exit(0)
+        logger.info("正在重启")
+        MuRainLib.reboot()
+
 
 
 class RunAPICommand(Command):
@@ -201,7 +201,7 @@ class HelpCommand(Command):
         self.command_name = "help"
 
     def run(self, input_command: CommandParsing, kwargs):
-        help_text = "MuRainBot2命令帮助：\n" + "\n".join([command.command_help for command in commands])
+        help_text = "命令帮助：\n" + "\n".join([command.command_help for command in commands])
         print(help_text)
 
 

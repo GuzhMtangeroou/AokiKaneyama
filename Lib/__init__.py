@@ -22,9 +22,10 @@ import Lib.ListeningServer as ListeningServer
 import Lib.PluginManager as PluginManager
 import Lib.QQDataCacher as QQDataCacher
 import Lib.Command as Command
+import main
 
-VERSION = "1.0"
-VERSION_WEEK = "2024#3"
+VERSION = main.VERSION
+VERSION_WEEK = main.VERSION_WEEK
 
 
 # Lib信息
